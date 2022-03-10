@@ -16,7 +16,7 @@ const Edit = () => {
         headers: myHeaders
       };
 
-      fetch(`${process.env.url}/profile`, requestOptions)
+      fetch('http://localhost:3000/api/v1/users', requestOptions)
       .then(response => response.json())
       .then(result=> setCurrentUser(result))
       .catch(error => console.log('error', error));
@@ -44,7 +44,7 @@ const Edit = () => {
       body: raw
     };
 
-    fetch(`${process.env.url}/users/${currentUser.id}`, requestOptions)
+    fetch(`http://localhost:3000/users/${currentUser.id}`, requestOptions)
       .then(() => {window.location = "/profile"})
     .catch(error => console.log('error', error));
   }

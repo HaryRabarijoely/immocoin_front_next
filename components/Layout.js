@@ -6,6 +6,7 @@ import { logOut } from '../redux/actions/userActions';
 import Cookies from 'js-cookie';
 import React from "react";
 
+
 const Layout = ({ children }) => {
     const isLoggedIn = useSelector(state => state.isLoggedIn);
     const userToken = useSelector(state => state.token);
@@ -44,12 +45,12 @@ const Layout = ({ children }) => {
         :
         setNavbarElements(
         <>
-            <Link href='#'>
+            <Link href='/posts/new'>
                 <a className={styles.navbarLinkCreate}>
                     Créer une annonce
                 </a>
             </Link>
-            <Link href='#'>
+            <Link href='/posts/owner_posts'>
                 <a className={styles.navbarLink}>
                     Mes annonces
             </a>
