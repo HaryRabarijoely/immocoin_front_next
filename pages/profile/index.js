@@ -19,7 +19,7 @@ const Profile = () => {
         headers: myHeaders
       };
 
-      fetch(`${process.env.url}/profile`, requestOptions)
+      fetch('http://localhost:3000/users', requestOptions)
       .then(response => response.json())
       .then(result=> setCurrentUser(result))
       .catch(error => console.log('error', error));}

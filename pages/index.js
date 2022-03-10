@@ -70,7 +70,7 @@ export default function Home() {
       .then(response => response.json())
       .then(response => {
         setPosts(response);
-        setAllPosts(response);
+        
       })
       .catch(err => console.log(err))
   }
